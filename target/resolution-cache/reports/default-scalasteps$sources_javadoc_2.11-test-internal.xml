@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="test-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20150509163053"/>
+		date="20150509164319"/>
 	<dependencies>
 		<module organisation="org.scalatest" name="scalatest_2.11">
 			<revision name="2.2.4" status="release" pubdate="20150129081600" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="1">
@@ -15,13 +15,13 @@
 				<metadata-artifact status="no" details="" size="4845" time="0" location="/Users/besil/.ivy2/cache/org.scalatest/scalatest_2.11/ivy-2.2.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.pom"/>
 				<caller organisation="default" name="scalasteps$sources_javadoc_2.11" conf="test-internal, test, optional, compile, provided, runtime" rev="2.2.4" rev-constraint-default="2.2.4" rev-constraint-dynamic="2.2.4" callerrev="1.0"/>
 				<artifacts>
-					<artifact name="scalatest_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="1438876" time="2272" location="/Users/besil/.ivy2/cache/org.scalatest/scalatest_2.11/srcs/scalatest_2.11-2.2.4-sources.jar">
+					<artifact name="scalatest_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1438876" time="0" location="/Users/besil/.ivy2/cache/org.scalatest/scalatest_2.11/srcs/scalatest_2.11-2.2.4-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4-sources.jar"/>
 					</artifact>
-					<artifact name="scalatest_2.11" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="7960119" time="10544" location="/Users/besil/.ivy2/cache/org.scalatest/scalatest_2.11/docs/scalatest_2.11-2.2.4-javadoc.jar">
+					<artifact name="scalatest_2.11" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="7960119" time="0" location="/Users/besil/.ivy2/cache/org.scalatest/scalatest_2.11/docs/scalatest_2.11-2.2.4-javadoc.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4-javadoc.jar"/>
 					</artifact>
-					<artifact name="scalatest_2.11" type="jar" ext="jar" status="successful" details="" size="7185789" time="12105" location="/Users/besil/.ivy2/cache/org.scalatest/scalatest_2.11/jars/scalatest_2.11-2.2.4.jar">
+					<artifact name="scalatest_2.11" type="jar" ext="jar" status="no" details="" size="7185789" time="0" location="/Users/besil/.ivy2/cache/org.scalatest/scalatest_2.11/jars/scalatest_2.11-2.2.4.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar"/>
 					</artifact>
 				</artifacts>
@@ -33,13 +33,13 @@
 				<metadata-artifact status="no" details="" size="2987" time="0" location="/Users/besil/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/ivy-1.0.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.pom"/>
 				<caller organisation="default" name="scalasteps$sources_javadoc_2.11" conf="test-internal, test, optional, compile, provided, runtime" rev="1.0.2" rev-constraint-default="1.0.2" rev-constraint-dynamic="1.0.2" callerrev="1.0"/>
 				<artifacts>
-					<artifact name="scala-xml_2.11" type="jar" ext="jar" status="successful" details="" size="648678" time="2076" location="/Users/besil/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/jars/scala-xml_2.11-1.0.2.jar">
+					<artifact name="scala-xml_2.11" type="jar" ext="jar" status="no" details="" size="648678" time="0" location="/Users/besil/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/jars/scala-xml_2.11-1.0.2.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar"/>
 					</artifact>
-					<artifact name="scala-xml_2.11" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="109171" time="800" location="/Users/besil/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/srcs/scala-xml_2.11-1.0.2-sources.jar">
+					<artifact name="scala-xml_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="109171" time="0" location="/Users/besil/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/srcs/scala-xml_2.11-1.0.2-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2-sources.jar"/>
 					</artifact>
-					<artifact name="scala-xml_2.11" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="1225359" time="2001" location="/Users/besil/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/docs/scala-xml_2.11-1.0.2-javadoc.jar">
+					<artifact name="scala-xml_2.11" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="1225359" time="0" location="/Users/besil/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/docs/scala-xml_2.11-1.0.2-javadoc.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2-javadoc.jar"/>
 					</artifact>
 				</artifacts>
@@ -54,10 +54,10 @@
 					<artifact name="scala-reflect" type="jar" ext="jar" status="no" details="" size="4391629" time="0" location="/Users/besil/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.2.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.jar"/>
 					</artifact>
-					<artifact name="scala-reflect" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="557871" time="1258" location="/Users/besil/.ivy2/cache/org.scala-lang/scala-reflect/srcs/scala-reflect-2.11.2-sources.jar">
+					<artifact name="scala-reflect" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="557871" time="0" location="/Users/besil/.ivy2/cache/org.scala-lang/scala-reflect/srcs/scala-reflect-2.11.2-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2-sources.jar"/>
 					</artifact>
-					<artifact name="scala-reflect" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="3622898" time="5161" location="/Users/besil/.ivy2/cache/org.scala-lang/scala-reflect/docs/scala-reflect-2.11.2-javadoc.jar">
+					<artifact name="scala-reflect" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="3622898" time="0" location="/Users/besil/.ivy2/cache/org.scala-lang/scala-reflect/docs/scala-reflect-2.11.2-javadoc.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2-javadoc.jar"/>
 					</artifact>
 				</artifacts>

@@ -9,4 +9,11 @@ class MyListTest extends FunSuite {
 
     assert( MyList.last(l) == 5 )
   }
+
+  test("Penultimate") {
+    val l = 1 to 5 toList
+
+    assert( MyList.penultimate(l) == 4 )
+  }
+
 }

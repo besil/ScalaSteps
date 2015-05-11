@@ -2,9 +2,12 @@
  * Created by besil on 09/05/15.
  */
 object MyList {
-  def reverse[T](l: List[T]): List[T] = l match {
-    case Nil => Nil
-    case h :: tail => reverse(tail) ::: List(h)
+  def reverse[T](l: List[T]): List[T] = {
+    def rev[T](res: List[T], curList: List[T]): List[T] = curList match {
+      case Nil => res
+      case h :: tail => rev(h :: res, tail)
+    }
+    rev(List(), l)
   }
 
   def length[T](l: List[T]) = {

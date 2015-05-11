@@ -2,6 +2,19 @@
  * Created by besil on 09/05/15.
  */
 object MyList {
+  def compress[T](l: List[T]): List[T] = l match {
+    case Nil => Nil
+    case h :: tail => h :: compress( l.dropWhile( _ == h ) )
+  }
+
+  def flatten[T](l: List[T]): List[T] = l match {
+    case Nil => Nil
+    case (l: List[T]) :: tail => flatten(l) ::: flatten(tail)
+    case head :: tail => head :: flatten(tail)
+  }
+
+  def isPalindrome[T](l: List[T]) = reverse(l) == l
+
   def reverse[T](l: List[T]): List[T] = {
     def rev[T](res: List[T], curList: List[T]): List[T] = curList match {
       case Nil => res

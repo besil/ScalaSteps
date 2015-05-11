@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b5d4f68-d4b4-4446-9ae6-1be6a69f5ded" name="Default" comment="Reverse optimized">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/MyList$.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/MyList$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/MyList.scala" afterPath="$PROJECT_DIR$/src/main/scala/MyList.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/MyListTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/MyListTest.scala" />
+    <list default="true" id="2b5d4f68-d4b4-4446-9ae6-1be6a69f5ded" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/MyList.class" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/MyList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/MyListTest$$anonfun$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/test-classes/MyListTest$$anonfun$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/MyListTest.class" afterPath="$PROJECT_DIR$/target/scala-2.11/test-classes/MyListTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ScalaSteps.iws" />
@@ -40,8 +40,8 @@
       <file leaf-file-name="MyList.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/MyList.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4631829">
-              <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.5700713">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -556,7 +556,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431355788213</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Compress">
+      <created>1431358219908</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1431358219908</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -604,7 +610,8 @@
     <MESSAGE value="Second exercise donw" />
     <MESSAGE value="Reverse added" />
     <MESSAGE value="Reverse optimized" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reverse optimized" />
+    <MESSAGE value="Compress" />
+    <option name="LAST_COMMIT_MESSAGE" value="Compress" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -718,8 +725,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/MyList.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4631829">
-          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.5700713">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>

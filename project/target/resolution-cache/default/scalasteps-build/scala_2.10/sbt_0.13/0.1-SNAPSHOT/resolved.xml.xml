@@ -4,8 +4,8 @@
 		module="scalasteps-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20150509162942"
-		e:scalaVersion="2.10" e:sbtVersion="0.13"
+		publication="20150511153317"
+		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>
 		scalasteps-build

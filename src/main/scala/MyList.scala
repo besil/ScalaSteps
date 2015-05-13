@@ -2,6 +2,24 @@
  * Created by besil on 09/05/15.
  */
 object MyList {
+  def encodeModified[T](l: List[T]): List[Any] = {
+    def myencode(l: List[(Int, T)], acc: List[Any]): List[Any] = l match {
+      case Nil => acc
+      case h :: tail => h match {
+        case (1, n) => myencode(tail, acc :: n)
+        case (x, y) => myencode(tail, acc :: y)
+      }
+    }
+    myencode(l, List[Any]())
+  }
+
+  def encode[T](l: List[T]): List[(Int, T)] = pack(l).map(t => (t.size, t(0)))
+
+  def pack[T](l: List[T]): List[List[T]] = l match {
+      case Nil => Nil
+      case h :: tail => l.takeWhile(_==h) :: pack(l.dropWhile(_==h))
+  }
+
   def compress[T](l: List[T]): List[T] = l match {
     case Nil => Nil
     case h :: tail => h :: compress( l.dropWhile( _ == h ) )

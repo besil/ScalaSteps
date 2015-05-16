@@ -2,6 +2,11 @@
  * Created by besil on 09/05/15.
  */
 object MyList {
+  def decode[T](l: List[(Int, T)]): List[T] = l match {
+    case Nil => Nil
+    case (k, v) :: tail => ( (for(i <- 1 to k) yield v).toList) ::: decode(tail)
+  }
+
   def encodeModified[T](l: List[T]): List[Any] = {
     def myencode(l: List[(Int, T)], acc: List[Any]): List[Any] = l match {
       case Nil => acc

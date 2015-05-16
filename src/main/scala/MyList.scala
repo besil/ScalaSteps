@@ -2,6 +2,28 @@
  * Created by besil on 09/05/15.
  */
 object MyList {
+  //  def slice[T](s:Int, e:Int, l: List[T]): List[T] = (for( i <- s until e) yield l(i) ).toList
+  def slice[T](s: Int, e: Int, l: List[T]): List[T] = {
+    def isIn(n: Int) = n >= s && n < e
+    def isOut(n: Int) = n >= e
+
+    def myslice(k: Int, acc: List[T], l: List[T]): List[T] = (k, l) match {
+      case (x, h :: tail) if isOut(k) => acc
+      case (x, h :: tail) if isIn(k)  => myslice(x + 1, acc :+ h, tail)
+      case (x, h :: tail)             => myslice(x + 1, acc, tail)
+    }
+    myslice(0, List(), l)
+  }
+
+  def split[T](n: Int, l: List[T]): (List[T], List[T]) = {
+    def mysplit(k: Int, acc: List[T], l: List[T]): (List[T], List[T]) = (k, l) match {
+      case (_, Nil) => (acc, Nil)
+      case (0, list) => (acc, list)
+      case (m, h :: tail) => mysplit(m - 1, acc :+ h, tail)
+    }
+    mysplit(n, List(), l)
+  }
+
   def drop[T](n: Int, l: List[T]): List[T] = {
     def mydrop(k: Int, l: List[T]): List[T] = (k, l) match {
       case (_, Nil) => Nil
@@ -31,7 +53,7 @@ object MyList {
 
   def decode[T](l: List[(Int, T)]): List[T] = l match {
     case Nil => Nil
-    case (k, v) :: tail => ((for (i <- 1 to k) yield v).toList) ::: decode(tail)
+    case (k, v) :: tail => (for (i <- 1 to k) yield v).toList ::: decode(tail)
   }
 
   def encodeModified[T](l: List[T]): List[Any] = {
@@ -45,7 +67,7 @@ object MyList {
     myencode(encode(l), List[Any]())
   }
 
-  def encode[T](l: List[T]): List[(Int, T)] = pack(l).map(t => (t.size, t(0)))
+  def encode[T](l: List[T]): List[(Int, T)] = pack(l).map(t => (t.size, t.head))
 
   def pack[T](l: List[T]): List[List[T]] = l match {
     case Nil => Nil
@@ -66,7 +88,7 @@ object MyList {
   def isPalindrome[T](l: List[T]) = reverse(l) == l
 
   def reverse[T](l: List[T]): List[T] = {
-    def rev[T](res: List[T], curList: List[T]): List[T] = curList match {
+    def rev(res: List[T], curList: List[T]): List[T] = curList match {
       case Nil => res
       case h :: tail => rev(h :: res, tail)
     }

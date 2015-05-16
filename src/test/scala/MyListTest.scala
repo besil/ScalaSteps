@@ -6,6 +6,14 @@ import org.scalatest.FunSuite
 class MyListTest extends FunSuite {
   val l = 1 to 5 toList
 
+  test("Slice") {
+    assert( MyList.slice(3, 7, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)) == List('d, 'e, 'f, 'g) )
+  }
+
+  test("Split") {
+    assert(MyList.split(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)) == (List('a, 'b, 'c),List('d, 'e, 'f, 'g, 'h, 'i, 'j, 'k)))
+  }
+
   test("Drop") {
     assert(MyList.drop(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)) == List('a, 'b, 'd, 'e, 'g, 'h, 'j, 'k))
   }
@@ -34,7 +42,7 @@ class MyListTest extends FunSuite {
 
   test("Flatten") { assert(MyList.flatten(List(List(1, 1), 2, List(3, List(5, 8)))) == List(1, 1, 2, 3, 5, 8))}
 
-  test("Palindrome") { assert( MyList.isPalindrome(List(1, 2, 3, 2, 1)) == true ) }
+  test("Palindrome") { assert( MyList.isPalindrome(List(1, 2, 3, 2, 1)) ) }
 
   test("Reverse") { assert( MyList.reverse(List(1, 1, 2, 3, 5, 8)) == List(8, 5, 3, 2, 1, 1) ) }
 

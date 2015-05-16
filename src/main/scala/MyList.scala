@@ -6,11 +6,11 @@ object MyList {
     def myencode(l: List[(Int, T)], acc: List[Any]): List[Any] = l match {
       case Nil => acc
       case h :: tail => h match {
-        case (1, n) => myencode(tail, acc :: n)
-        case (x, y) => myencode(tail, acc :: y)
+        case (1, n) => myencode(tail, acc :+ n)
+        case (x, y) => myencode(tail, acc :+ (x, y) )
       }
     }
-    myencode(l, List[Any]())
+    myencode(encode(l), List[Any]())
   }
 
   def encode[T](l: List[T]): List[(Int, T)] = pack(l).map(t => (t.size, t(0)))
@@ -27,7 +27,7 @@ object MyList {
 
   def flatten[T](l: List[T]): List[T] = l match {
     case Nil => Nil
-    case (l: List[T]) :: tail => flatten(l) ::: flatten(tail)
+    case (l: List[T]) :: (tail: List[T]) => flatten(l) ::: flatten(tail)
     case head :: tail => head :: flatten(tail)
   }
 

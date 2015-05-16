@@ -4,7 +4,7 @@
 		module="scalasteps$sbt_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20150513181606"
+		publication="20150516104154"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>

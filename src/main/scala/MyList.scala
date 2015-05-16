@@ -2,9 +2,36 @@
  * Created by besil on 09/05/15.
  */
 object MyList {
+  def drop[T](n: Int, l: List[T]): List[T] = {
+    def mydrop(k: Int, l: List[T]): List[T] = (k, l) match {
+      case (_, Nil) => Nil
+      case (x, h :: tail) if x > 1 => h :: mydrop(x - 1, tail)
+      case (1, h :: tail) => mydrop(n, tail)
+    }
+    mydrop(n, l)
+  }
+
+  def duplicateN[T](n: Int, l: List[T]): List[T] = l match {
+    case Nil => Nil
+    case h :: tail => (for (i <- 1 to n) yield h).toList ::: duplicateN(n, tail)
+  }
+
+  def duplicate[T](l: List[T]): List[T] = l match {
+    case Nil => Nil
+    case h :: tail => h :: h :: duplicate(tail)
+  }
+
+  def encodeDirect[T](l: List[T]): List[(Int, T)] = l match {
+    case Nil => Nil
+    case t => {
+      val (same, rest) = t.span(_ == t.head)
+      (same.size, same.head) :: encodeDirect(rest)
+    }
+  }
+
   def decode[T](l: List[(Int, T)]): List[T] = l match {
     case Nil => Nil
-    case (k, v) :: tail => ( (for(i <- 1 to k) yield v).toList) ::: decode(tail)
+    case (k, v) :: tail => ((for (i <- 1 to k) yield v).toList) ::: decode(tail)
   }
 
   def encodeModified[T](l: List[T]): List[Any] = {
@@ -12,7 +39,7 @@ object MyList {
       case Nil => acc
       case h :: tail => h match {
         case (1, n) => myencode(tail, acc :+ n)
-        case (x, y) => myencode(tail, acc :+ (x, y) )
+        case (x, y) => myencode(tail, acc :+(x, y))
       }
     }
     myencode(encode(l), List[Any]())
@@ -21,18 +48,18 @@ object MyList {
   def encode[T](l: List[T]): List[(Int, T)] = pack(l).map(t => (t.size, t(0)))
 
   def pack[T](l: List[T]): List[List[T]] = l match {
-      case Nil => Nil
-      case h :: tail => l.takeWhile(_==h) :: pack(l.dropWhile(_==h))
+    case Nil => Nil
+    case h :: tail => l.takeWhile(_ == h) :: pack(l.dropWhile(_ == h))
   }
 
   def compress[T](l: List[T]): List[T] = l match {
     case Nil => Nil
-    case h :: tail => h :: compress( l.dropWhile( _ == h ) )
+    case h :: tail => h :: compress(l.dropWhile(_ == h))
   }
 
   def flatten[T](l: List[T]): List[T] = l match {
     case Nil => Nil
-    case (l: List[T]) :: (tail: List[T]) => flatten(l) ::: flatten(tail)
+    case (l: List[T]) :: (tail) => flatten(l) ::: flatten(tail)
     case head :: tail => head :: flatten(tail)
   }
 
@@ -49,7 +76,7 @@ object MyList {
   def length[T](l: List[T]) = {
     def count(n: Int, l: List[T]): Int = l match {
       case Nil => n
-      case h :: tail => count(n+1, tail)
+      case h :: tail => count(n + 1, tail)
     }
     count(0, l)
   }
@@ -57,7 +84,7 @@ object MyList {
   def nth[T](k: Int, l: List[T]): T = {
     def next(k: Int, l: List[T]): T = k match {
       case 0 => l.head
-      case _ => next(k-1, l.tail)
+      case _ => next(k - 1, l.tail)
     }
     next(k, l)
   }

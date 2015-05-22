@@ -4,7 +4,7 @@
 		module="scalasteps-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20150516104136"
+		publication="20150522123141"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

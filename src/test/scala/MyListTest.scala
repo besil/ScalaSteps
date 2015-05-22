@@ -6,6 +6,11 @@ import org.scalatest.FunSuite
 class MyListTest extends FunSuite {
   val l = 1 to 5 toList
 
+  test("Rotate") {
+    assert( MyList.rotate(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)) == List('d, 'e, 'f, 'g, 'h, 'i, 'j, 'k, 'a, 'b, 'c) )
+    assert( MyList.rotate(-2, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)) == List('j, 'k, 'a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i) )
+  }
+
   test("Slice") {
     assert( MyList.slice(3, 7, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)) == List('d, 'e, 'f, 'g) )
   }

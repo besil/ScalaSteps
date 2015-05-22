@@ -2,6 +2,15 @@
  * Created by besil on 09/05/15.
  */
 object MyList {
+  def rotate[T](r: Int, l: List[T]): List[T] = {
+    def myRotate(k: Int, acc: List[T], list: List[T]): List[T] = k match {
+      case 0 => if(r > 0) list ::: acc else acc:::list
+      case x if x > 0 => myRotate(k-1, acc :+ list.head, list.tail)
+      case x if x < 0 => { myRotate(k+1, list.reverse.head :: acc, list.reverse.tail.reverse) }
+    }
+    myRotate(r, List(), l)
+  }
+
   //  def slice[T](s:Int, e:Int, l: List[T]): List[T] = (for( i <- s until e) yield l(i) ).toList
   def slice[T](s: Int, e: Int, l: List[T]): List[T] = {
     def isIn(n: Int) = n >= s && n < e

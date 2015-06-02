@@ -2,11 +2,19 @@
  * Created by besil on 09/05/15.
  */
 object MyList {
+  def removeAt[T](i: Int, l: List[T]): (List[T], T) = {
+    def myRemove(i: Int, l: List[T], acc: List[T]): (List[T], T) = i match {
+      case 0 => ( acc ::: l.tail, l.head)
+      case n => myRemove(n-1, l.tail, l.head :: acc)
+    }
+    myRemove(i, l, List())
+  }
+
   def rotate[T](r: Int, l: List[T]): List[T] = {
     def myRotate(k: Int, acc: List[T], list: List[T]): List[T] = k match {
       case 0 => if(r > 0) list ::: acc else acc:::list
       case x if x > 0 => myRotate(k-1, acc :+ list.head, list.tail)
-      case x if x < 0 => { myRotate(k+1, list.reverse.head :: acc, list.reverse.tail.reverse) }
+      case x if x < 0 => myRotate(k+1, list.reverse.head :: acc, list.reverse.tail.reverse)
     }
     myRotate(r, List(), l)
   }

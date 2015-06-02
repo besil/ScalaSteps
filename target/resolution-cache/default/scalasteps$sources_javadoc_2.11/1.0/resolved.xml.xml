@@ -4,7 +4,7 @@
 		module="scalasteps$sources_javadoc_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20150522123359"
+		publication="20150602121434"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

@@ -6,6 +6,13 @@ import org.scalatest.FunSuite
 class MyListTest extends FunSuite {
   val l = 1 to 5 toList
 
+  test("RemoveAt") {
+    val actual: (List[Symbol], Symbol) = MyList.removeAt(1, List('a, 'b, 'c, 'd))
+    val expected = (List('a, 'c, 'd),'b)
+
+    assert( actual == expected )
+  }
+
   test("Rotate") {
     assert( MyList.rotate(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)) == List('d, 'e, 'f, 'g, 'h, 'i, 'j, 'k, 'a, 'b, 'c) )
     assert( MyList.rotate(-2, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)) == List('j, 'k, 'a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i) )

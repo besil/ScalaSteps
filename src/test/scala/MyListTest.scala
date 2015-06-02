@@ -6,6 +6,13 @@ import org.scalatest.FunSuite
 class MyListTest extends FunSuite {
   val l = 1 to 5 toList
 
+  test("InsertAt") {
+    val actual = MyList.insertAt('new, 1, List('a, 'b, 'c, 'd))
+    val expected = List('a, 'new, 'b, 'c, 'd)
+
+    assert(actual == expected)
+  }
+
   test("RemoveAt") {
     val actual: (List[Symbol], Symbol) = MyList.removeAt(1, List('a, 'b, 'c, 'd))
     val expected = (List('a, 'c, 'd),'b)

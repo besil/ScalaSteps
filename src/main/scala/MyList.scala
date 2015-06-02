@@ -2,6 +2,14 @@
  * Created by besil on 09/05/15.
  */
 object MyList {
+  def insertAt[T](el: T, pos: Int, l: List[T]): List[T] = {
+    def myInsert(i: Int, l: List[T], acc: List[T]): List[T] = i match {
+      case 0 => (acc :+ el) ::: l
+      case n => myInsert(n - 1, l.tail, l.head :: acc)
+    }
+    myInsert(pos, l, List())
+  }
+
   def removeAt[T](i: Int, l: List[T]): (List[T], T) = {
     def myRemove(i: Int, l: List[T], acc: List[T]): (List[T], T) = i match {
       case 0 => ( acc ::: l.tail, l.head)

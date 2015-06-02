@@ -6,6 +6,20 @@ import org.scalatest.FunSuite
 class MyListTest extends FunSuite {
   val l = 1 to 5 toList
 
+  test("randomSelect") {
+    val actual: List[Symbol] = MyList.randomSelect(3, List('a, 'b, 'c, 'd, 'f, 'g, 'h))
+    val expected = List('e, 'd, 'a)
+
+    assert(actual.size == expected.size)
+  }
+
+  test("range") {
+    val actual: List[Int] = MyList.range(4, 9)
+    val expected = List(4, 5, 6, 7, 8, 9)
+
+    assert(actual == expected)
+  }
+
   test("InsertAt") {
     val actual = MyList.insertAt('new, 1, List('a, 'b, 'c, 'd))
     val expected = List('a, 'new, 'b, 'c, 'd)

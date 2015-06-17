@@ -4,6 +4,10 @@ import scala.util.Random
  * Created by besil on 09/05/15.
  */
 object MyList {
+  def lsort[T](l: List[List[T]]): List[List[T]] = l
+
+  def combinations[T](n: Int, l: List[T]): List[List[T]] = l.combinations(n).toList
+
   def randomPermute[T](l: List[T]): List[T] = (for (i <- 0 to l.size - 1) yield randomSelect(1, l)(0)).toList
 
   def lotto(n: Int, max: Int): List[Int] = randomSelect(max - n, range(0, max))
@@ -16,8 +20,6 @@ object MyList {
     res
   }
 
-  def range(start: Int, end: Int): List[Int] = start to end toList
-
   def removeAt[T](i: Int, l: List[T]): (List[T], T) = {
     def myRemove(i: Int, l: List[T], acc: List[T]): (List[T], T) = i match {
       case 0 => (acc ::: l.tail, l.head)
@@ -25,6 +27,8 @@ object MyList {
     }
     myRemove(i, l, List())
   }
+
+  def range(start: Int, end: Int): List[Int] = start to end toList
 
   def insertAt[T](el: T, pos: Int, l: List[T]): List[T] = {
     def myInsert(i: Int, l: List[T], acc: List[T]): List[T] = i match {

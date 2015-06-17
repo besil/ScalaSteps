@@ -6,6 +6,20 @@ import org.scalatest.FunSuite
 class MyListTest extends FunSuite {
   val l = 1 to 5 toList
 
+  test("lsort") {
+    val actual: List[List[Symbol]] = MyList.lsort(List(List('a, 'b, 'c), List('d, 'e), List('f, 'g, 'h), List('d, 'e), List('i, 'j, 'k, 'l), List('m, 'n), List('o)))
+    val expected: List[List[Symbol]] = List(List('i, 'j, 'k, 'l), List('o), List('a, 'b, 'c), List('f, 'g, 'h), List('d, 'e), List('d, 'e), List('m, 'n))
+
+    assert(actual == expected)
+  }
+
+  test("combinations") {
+    val actual: List[List[Symbol]] = MyList.combinations(3, List('a, 'b, 'c, 'd, 'e, 'f))
+    val expected = MyList.range(1, 20)
+
+    assert(actual.size == expected.size)
+  }
+
   test("randomPermute") {
     val actual = MyList.randomPermute(List('a, 'b, 'c, 'd, 'e, 'f))
     val expected = List('b, 'a, 'd, 'c, 'e, 'f)

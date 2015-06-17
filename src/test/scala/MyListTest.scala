@@ -6,6 +6,13 @@ import org.scalatest.FunSuite
 class MyListTest extends FunSuite {
   val l = 1 to 5 toList
 
+  test("lotto") {
+    val actual: List[Int] = MyList.lotto(6, 49)
+    val expected = List(1, 2, 3, 4, 5, 6)
+
+    assert(actual.size == expected.size)
+  }
+
   test("randomSelect") {
     val actual: List[Symbol] = MyList.randomSelect(3, List('a, 'b, 'c, 'd, 'f, 'g, 'h))
     val expected = List('e, 'd, 'a)

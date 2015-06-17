@@ -703,9 +703,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.8!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8!apply-macro.jar
-[debug] :: resolution report :: resolve 5591ms :: artifacts dl 194ms
-[debug] 	report for default#scalasteps$sbt_2.11;1.0 default produced in /Users/besil/MyStuff/IdeaProjects/ScalaSteps/target/resolution-cache/reports/default-scalasteps$sbt_2.11-default.xml
-[debug] 	resolve done (5591ms resolve - 194ms download)
+[debug] :: resolution report :: resolve 1310ms :: artifacts dl 27ms
+[debug] 	report for default#scalasteps$sbt_2.11;1.0 default produced in /Users/besil/MyStuff/ScalaSteps/target/resolution-cache/reports/default-scalasteps$sbt_2.11-default.xml
+[debug] 	resolve done (1310ms resolve - 27ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: default#scalasteps$sources_2.11;1.0
 [debug] 	confs: [default]
@@ -1069,6 +1069,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_8_2;0.13.8!precompiled-2_8_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.8!precompiled-2_9_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.8!precompiled-2_9_3.jar(src)
-[debug] :: resolution report :: resolve 734ms :: artifacts dl 216ms
-[debug] 	report for default#scalasteps$sources_2.11;1.0 default produced in /Users/besil/MyStuff/IdeaProjects/ScalaSteps/target/resolution-cache/reports/default-scalasteps$sources_2.11-default.xml
-[debug] 	resolve done (734ms resolve - 216ms download)
+[debug] :: resolution report :: resolve 360ms :: artifacts dl 133ms
+[debug] 	report for default#scalasteps$sources_2.11;1.0 default produced in /Users/besil/MyStuff/ScalaSteps/target/resolution-cache/reports/default-scalasteps$sources_2.11-default.xml
+[debug] 	resolve done (360ms resolve - 133ms download)

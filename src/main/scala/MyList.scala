@@ -4,6 +4,9 @@ import scala.util.Random
  * Created by besil on 09/05/15.
  */
 object MyList {
+  def lotto(n: Int, max: Int): List[Int] = randomSelect(max - n, range(0, max))
+
+
   def randomSelect[T](n: Int, l: List[T]): List[T] = {
     val random = new Random()
     var res = l

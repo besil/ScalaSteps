@@ -6,6 +6,13 @@ import org.scalatest.FunSuite
 class MyListTest extends FunSuite {
   val l = 1 to 5 toList
 
+  test("randomPermute") {
+    val actual = MyList.randomPermute(List('a, 'b, 'c, 'd, 'e, 'f))
+    val expected = List('b, 'a, 'd, 'c, 'e, 'f)
+
+    assert(actual.size == expected.size)
+  }
+
   test("lotto") {
     val actual: List[Int] = MyList.lotto(6, 49)
     val expected = List(1, 2, 3, 4, 5, 6)

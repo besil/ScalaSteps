@@ -4,7 +4,7 @@ import scala.util.Random
  * Created by besil on 09/05/15.
  */
 object MyList {
-  def lsort[T](l: List[List[T]]): List[List[T]] = l
+  def lsort[T](l: List[List[T]]): List[List[T]] = l.sortBy(l => l.size)
 
   def combinations[T](n: Int, l: List[T]): List[List[T]] = l.combinations(n).toList
 
